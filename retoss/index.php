@@ -7,6 +7,7 @@ License: Apache License 2.0
 License URL: http://www.apache.org/licenses/LICENSE-2.0.html
 */
 
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
