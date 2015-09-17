@@ -13,11 +13,7 @@ This is the php code for an generic eCommerce website built upon Yii framework 1
 
 6- Item are associated to localities and tags. The localities and tags are dynamic and can be entered and fetched from db directly.
 
-<<<<<<< HEAD
-7- 
-=======
 
->>>>>>> b54cd0c15dd4f902ac436405ee0f339850ce2b26
 
 TODO:
 
