@@ -16,6 +16,7 @@ class AppCommonCoupon
 	 * format 
 	 * array(
 	 *	'couponid'=>array(
+	 * 		'unique_id'=>'unique_id',
 	 *		'condition_name1'=> array(//all permissible values),
 	 *		'condition_name2'=> valueToCompare,
 	 *		'condition_name3'=> array( array(//nested array, all values not permissible) ),
@@ -29,6 +30,7 @@ class AppCommonCoupon
 		(
 			'twwalletpay'=> array
 			(
+				'unique_id'=>'1',
 				'date_start'=> '2015-08-13 01:00:00',
 				'date_end'=> '2016-08-13 01:00:00',
 				'min_price'=> 0,//for being applicable
@@ -44,6 +46,7 @@ class AppCommonCoupon
 			),
 			'atleasttwo'=> array
 			(
+				'unique_id'=>'2',
 				'date_start'=> '2015-08-13 01:00:00',
 				'date_end'=> '2016-08-13 01:00:00',
 				'min_price'=> 0,//for being applicable
@@ -58,6 +61,7 @@ class AppCommonCoupon
 			),
 			'twoandwallet'=> array
 			(
+				'unique_id'=>'3',
 				'date_start'=> '2015-08-13 01:00:00',
 				'date_end'=> '2016-08-13 01:00:00',
 				'min_price'=> 0,//for being applicable
@@ -74,6 +78,7 @@ class AppCommonCoupon
 			),
 			'twtaste'=> array
 			(
+				'unique_id'=>'4',
 				'date_start'=> '2015-08-13 01:00:00',
 				'date_end'=> '2016-08-13 01:00:00',
 				'min_price'=> 0,//for being applicable

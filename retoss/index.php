@@ -1,10 +1,11 @@
-<!--Author: Ankit Bisht
+<?php
+/*
+Author: Ankit Bisht
 Author email: ankit.bisht.kec@gmail.com, ankit.bisht.com@gmail.com
 Author LinkedIn profile: https://in.linkedin.com/pub/ankit-bisht/16/a6/167
 License: Apache License 2.0
 License URL: http://www.apache.org/licenses/LICENSE-2.0.html
--->
-<?php
+*/
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';

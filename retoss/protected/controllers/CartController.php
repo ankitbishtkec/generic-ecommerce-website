@@ -688,7 +688,7 @@ class CartController extends Controller
 				" and it will be delivered between 12:30 PM to 2:00 PM. Thank You! tw.in";*/
 				//sms customer
 				AppCommon::sendSmsOnTime( $secStage1->tiffinPriceTimeSelectionArr[0]->aOrderObj->destination_phone, $content_sms, "null", true );
-				AppCommon::sendSmsOnTime( '9611699669', $content_sms, "null", true );
+				AppCommon::sendSmsOnTime( '9999999999', $content_sms, "null", true );
 				//redirect to view order details
 				Yii::app()->getRequest()->redirect( $orderViewLink );
 				//TODO: price time and cart value decrease
