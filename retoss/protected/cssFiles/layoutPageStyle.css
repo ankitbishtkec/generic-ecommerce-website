@@ -1,0 +1,2945 @@
+.wordwrap { 
+   /*white-space: pre-wrap;*/      /* CSS3 */   
+   /*white-space: -moz-pre-wrap;*/ /* Firefox */    
+   /*white-space: -pre-wrap;*/     /* Opera <7 */   
+   /*white-space: -o-pre-wrap;*/   /* Opera 7 */ 
+   white-space: normal;   
+   word-wrap: break-word;      /* IE */
+}
+
+
+html {
+    box-sizing: border-box
+}
+*,
+::after,
+::before {
+    box-sizing: inherit
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline
+}
+article h2,
+strong {
+    font-weight: 700
+}
+article h2,
+body,
+strong {
+    font-family: Platform, sans-serif
+}
+em,
+form label {
+    font-style: italic
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+body {
+    line-height: 1;
+    overflow-y: scroll;
+    background-color: #fff;
+    color: #4a4a4a
+}
+ol,
+ul {
+    list-style: none
+}
+blockquote,
+q {
+    quotes: none
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: '';
+    content: none
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+.section-content {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto
+}
+.section-content::after {
+    clear: both;
+    content: "";
+    display: table
+}
+@font-face {
+    font-family: 'Eudald News';
+    src: url(../fonts/EudaldNewsRoman.90a69de7.woff) format("woff"), url(../fonts/EudaldNewsRoman.80926522.ttf) format("truetype");
+    font-weight: 400
+}
+@font-face {
+    font-family: 'Eudald News';
+    src: url(../fonts/EudaldNewsItalic.9b039362.woff) format("woff"), url(../fonts/EudaldNewsItalic.4d34007e.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400
+}
+@font-face {
+    font-family: Platform;
+    src: url(../fonts/Platform-Light.45d9ef72.woff) format("woff"), url(../fonts/Platform-Light.a3589486.ttf) format("truetype");
+    font-weight: 200
+}
+@font-face {
+    font-family: Platform;
+    src: url(../fonts/Platform-Regular.f847c5b6.woff) format("woff"), url(../fonts/Platform-Regular.e9f89b6e.ttf) format("truetype");
+    font-weight: 400
+}
+@font-face {
+    font-family: Platform;
+    src: url(../fonts/Platform-Medium.24804f38.woff) format("woff"), url(../fonts/Platform-Medium.1c5438e8.ttf) format("truetype");
+    font-weight: 500
+}
+article {
+    letter-spacing: 2px;
+    line-height: 1.2em
+}
+article h1 {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 2em
+}
+article h2 {
+    padding-bottom: .5em;
+    padding-top: 1em
+}
+article p {
+    padding: 1em 0
+}
+article a {
+    font-size: 1em
+}
+article ul {
+    list-style: disc
+}
+article ol {
+    list-style: decimal
+}
+article ol,
+article ul {
+    padding: 0 0 0 2em
+}
+article ol li,
+article ul li {
+    padding: 0 0 .5em
+}
+article .highlight {
+    background-color: #ff0
+}
+em {
+    font-family: "Eudald News", serif
+}
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-select,
+.btn-weak {
+    font-family: Platform, sans-serif;
+    letter-spacing: .25em;
+    text-transform: uppercase
+}
+.iphone-app-icon {
+    background-image: url(../images/appstore-ios.2cd3d064.png)
+}
+.android-app-icon {
+    background-image: url(../images/appstore-android.c2fcca9c.png)
+}
+.twitter-icon {
+    background-image: url(../images/Footer_SocialIcons.d85158f0.svg);
+    background-position: left
+}
+.android-icon {
+    background-image: url(../images/android_icon_rnd.536ef6ab.png)
+}
+.facebook-icon {
+    background-image: url(../images/Footer_SocialIcons.d85158f0.svg);
+    background-position: center
+}
+.apple-icon {
+    background-image: url(../images/apple_icon_rnd.4a07e2c0.png)
+}
+.instagram-icon {
+    background-image: url(../images/Footer_SocialIcons.d85158f0.svg);
+    background-position: right
+}
+.android-app-icon,
+.android-icon,
+.apple-icon,
+.facebook-icon,
+.instagram-icon,
+.iphone-app-icon,
+.twitter-icon {
+    transition: opacity .25s;
+    background-repeat: no-repeat
+}
+.android-app-icon:hover,
+.android-icon:hover,
+.apple-icon:hover,
+.facebook-icon:hover,
+.instagram-icon:hover,
+.iphone-app-icon:hover,
+.twitter-icon:hover {
+    opacity: .7
+}
+.checkmark-icon {
+    background: url(../images/checkmark_icon.png) center center/2.2em no-repeat
+}
+.checkmark-icon:disabled {
+    background-image: url(../images/checkmark_icon_gray.png)
+}
+button,
+input[type=submit] {
+    transition: background-color .2s, color .2s
+}
+button:not(:disabled):hover,
+input[type=submit]:not(:disabled):hover {
+    cursor: pointer
+}
+.btn-counter:disabled,
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-select:disabled,
+.btn-weak:disabled,
+.btn:disabled {
+    cursor: default;
+    opacity: .5
+}
+button::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner {
+    border: 0
+}
+button:focus,
+input[type=submit]:focus {
+    outline: 0
+}
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-weak {
+    font-size: 1em;
+    margin: .5em;
+    padding: .5em 1em
+}
+.btn-primary {
+    background-color: #6ba539;
+    border: none;
+    color: #fff
+}
+.btn-primary:not(:disabled):hover {
+    background-color: #007a3e
+}
+.btn-secondary {
+    background-color: #ffa300;
+    border: none;
+    color: #fff
+}
+.btn-secondary:not(:disabled):hover {
+    background-color: #ff6a13;
+    color: #ffa300
+}
+.btn-weak {
+    background-color: transparent;
+    border: none;
+    color: #fff
+}
+.btn-weak:not(:disabled):hover {
+    opacity: .5
+}
+.btn-select {
+    background-color: transparent;
+    border: none;
+    color: #c4d600;
+    font-size: 1.125em;
+    margin: .5em 1.5em;
+    padding: .5em 0
+}
+.btn-counter,
+.btn-link {
+    background-color: transparent;
+    padding: 0
+}
+.btn-select:not(:disabled):hover {
+    opacity: .5
+}
+.btn-link {
+    border: none;
+    color: #6ba539;
+    font-family: "Eudald News", serif;
+    font-size: .875em;
+    margin: 0;
+    text-decoration: underline
+}
+.intro a,
+.main-footer a {
+    text-decoration: none
+}
+.btn-link:hover {
+    color: #527f2c
+}
+.btn-counter {
+    border: 1px solid #4a4a4a;
+    border-radius: 50%;
+    color: #4a4a4a;
+    font-family: Platform, sans-serif;
+    font-size: 1.5em;
+    font-weight: 200;
+    height: 1.75em;
+    width: 1.75em;
+    text-align: center
+}
+.btn-counter:enabled:hover {
+    background-color: #bec6c4
+}
+a {
+    transition-duration: .2s;
+    color: #6ba539;
+    font-family: "Eudald News", serif;
+    font-size: .875em
+}
+a:hover {
+    color: #527f2c
+}
+a::-moz-focus-inner {
+    border: 0
+}
+.sprig-dropdown .sprig-dropdown-head,
+.sprig-dropdown .sprig-dropdown-option {
+    border: none;
+    font-family: Platform, sans-serif;
+    font-size: 1em;
+    letter-spacing: 3px;
+    margin: 0;
+    text-align: left
+}
+a:focus {
+    outline: 0
+}
+.sprig-dropdown {
+    background-color: transparent;
+    line-height: 1.5em;
+    min-width: 6em;
+    position: relative
+}
+.sprig-dropdown .sprig-dropdown-head {
+    background-color: transparent;
+    color: #4a4a4a;
+    outline: 0
+}
+.sprig-dropdown .sprig-dropdown-head .username {
+    color: #6ba539
+}
+.sprig-dropdown .sprig-dropdown-head:hover {
+    background-color: #f7f7f7;
+    color: #4a4a4a
+}
+.sprig-dropdown .sprig-dropdown-head:hover .username {
+    color: #4a4a4a
+}
+.sprig-dropdown .sprig-dropdown-options {
+    background-color: #f7f7f7;
+    margin: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 100%
+}
+.sprig-dropdown .sprig-dropdown-option {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+    transition-property: -webkit-transform, opacity, visibility;
+    transition-property: transform, opacity, visibility;
+    transition-duration: .15s, .15s, .1s;
+    background-color: #f7f7f7;
+    color: #6ba539;
+    opacity: 0;
+    padding: .25em .66em;
+    width: 100%
+}
+form label,
+form label .field-error-message,
+form textarea {
+    font-family: "Eudald News", serif
+}
+.sprig-dropdown .sprig-dropdown-option:hover {
+    color: #4a4a4a
+}
+.sprig-dropdown.open .sprig-dropdown-head {
+    background-color: #f7f7f7
+}
+.sprig-dropdown.open .sprig-dropdown-options {
+    visibility: visible
+}
+.sprig-dropdown.open .sprig-dropdown-option {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1
+}
+@-webkit-keyframes spin {
+    to {
+        -webkit-transform: rotate(1turn)
+    }
+}
+@keyframes spin {
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+.spinner {
+    -webkit-animation: spin 1s infinite steps(8);
+    animation: spin 1s infinite steps(8);
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    margin: 0 .5em;
+    font-size: 20px;
+    text-indent: 999em;
+    overflow: hidden
+}
+.spinner:after,
+.spinner:before,
+.spinner>div:after,
+.spinner>div:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1.85em;
+    width: .3em;
+    height: 1em;
+    border-radius: .2em;
+    box-shadow: 0 3em #eee;
+    -webkit-transform-origin: 50% 2em;
+    transform-origin: 50% 2em
+}
+.spinner:before {
+    background: #555
+}
+.spinner:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background: #888
+}
+.spinner>div:before {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background: #a2a2a2
+}
+.spinner>div:after {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    background: #bbb
+}
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=text]:focus {
+    outline: 0
+}
+input[type=number] {
+    -moz-appearance: textfield
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none
+}
+input[type=number]::-o-inner-spin-button,
+input[type=number]::-o-outer-spin-button {
+    -o-appearance: none;
+    margin: 0
+}
+form {
+    margin-top: 2em;
+    padding: 0 2em
+}
+form input[type=number],
+form input[type=password],
+form input[type=text] {
+    color: #4a4a4a;
+    font-family: "Eudald News", serif;
+    line-height: 1.5em;
+    margin-top: .5em;
+    width: 100%
+}
+form input[type=number]:disabled,
+form input[type=password]:disabled,
+form input[type=text]:disabled {
+    background-color: transparent
+}
+form input[type=number]+label.valid.error::before,
+form input[type=number].error+label::before,
+form input[type=number].ng-invalid.ng-dirty+label::before,
+form input[type=number]:focus+label.error::before,
+form input[type=password]+label.valid.error::before,
+form input[type=password].error+label::before,
+form input[type=password].ng-invalid.ng-dirty+label::before,
+form input[type=password]:focus+label.error::before,
+form input[type=text]+label.valid.error::before,
+form input[type=text].error+label::before,
+form input[type=text].ng-invalid.ng-dirty+label::before,
+form input[type=text]:focus+label.error::before {
+    background-color: #df0000
+}
+form input[type=number]+label.valid.error .label-content,
+form input[type=number].ng-invalid.ng-dirty+label .label-content,
+form input[type=number]:focus+label.error .label-content,
+form input[type=password]+label.valid.error .label-content,
+form input[type=password].ng-invalid.ng-dirty+label .label-content,
+form input[type=password]:focus+label.error .label-content,
+form input[type=text]+label.valid.error .label-content,
+form input[type=text].ng-invalid.ng-dirty+label .label-content,
+form input[type=text]:focus+label.error .label-content {
+    color: #df0000
+}
+form input[type=number]:focus+label::before,
+form input[type=password]:focus+label::before,
+form input[type=text]:focus+label::before {
+    background-color: #6ba539;
+    height: 2px
+}
+form input[type=number]+label.valid::before,
+form input[type=password]+label.valid::before,
+form input[type=text]+label.valid::before {
+    background-color: #6ba539
+}
+form input[type=number]+label.valid,
+form input[type=number]:focus+label,
+form input[type=password]+label.valid,
+form input[type=password]:focus+label,
+form input[type=text]+label.valid,
+form input[type=text]:focus+label {
+    pointer-events: none
+}
+form input[type=number]+label.valid .label-content,
+form input[type=number]:focus+label .label-content,
+form input[type=password]+label.valid .label-content,
+form input[type=password]:focus+label .label-content,
+form input[type=text]+label.valid .label-content,
+form input[type=text]:focus+label .label-content {
+    color: #6ba539
+}
+form input[type=number]+label::before,
+form input[type=password]+label::before,
+form input[type=text]+label::before {
+    transition-property: background-color, height;
+    transition-duration: .3s, .3s;
+    background-color: #9da6b1;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+form textarea {
+    border: 1px solid #9da6b1;
+    color: #4a4a4a;
+    font-size: 1em;
+    height: 6em;
+    margin-top: 1em;
+    width: 100%
+}
+form textarea:focus {
+    border: 1px solid #6ba539;
+    -moz-appearance: none;
+    outline: 0
+}
+form textarea.error,
+form textarea.ng-invalid.ng-dirty {
+    border-color: #df0000
+}
+form textarea+label.valid.error .label-content,
+form textarea.ng-invalid.ng-dirty+label .label-content,
+form textarea:focus+label.error .label-content {
+    color: #df0000
+}
+form textarea+label.valid .label-content,
+form textarea.valid,
+form textarea:focus+label .label-content {
+    color: #6ba539
+}
+form textarea+label.valid,
+form textarea:focus+label {
+    pointer-events: none
+}
+form label {
+    color: #4a4a4a;
+    display: block;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    line-height: 1.3em;
+    min-height: 2em;
+    overflow: hidden;
+    position: relative;
+    text-transform: lowercase;
+    width: 100%
+}
+form label.error,
+form.ng-submitted .ng-invalid-required+label .label-content {
+    color: #df0000
+}
+form label .label-content {
+    transition-property: color;
+    transition-duration: .3s;
+    display: block;
+    margin-left: .125em;
+    margin-top: .125em;
+    position: relative
+}
+form label .field-error-message {
+    color: #df0000;
+    font-size: .75em;
+    font-style: italic;
+    line-height: 1.4em;
+    text-transform: none
+}
+form.ng-submitted .ng-invalid-required+label::before {
+    background-color: #df0000
+}
+body.ngdialog-open {
+    overflow-y: scroll
+}
+.ngdialog.ngdialog-theme-sprig {
+    height: 100%
+}
+.ngdialog.ngdialog-theme-sprig:before {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 50%
+}
+.ngdialog.ngdialog-theme-sprig .ngdialog-overlay {
+    background: rgba(0, 0, 0, .6)
+}
+.ngdialog.ngdialog-theme-sprig .ngdialog-content {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: anim-open;
+    animation-name: anim-open;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    display: inline-block;
+    line-height: 1.5em;
+    margin-left: -21.297303612em;
+    max-width: 100%;
+    padding: 1.25em;
+    position: relative;
+    vertical-align: middle;
+    width: 42.594607224em
+}
+.ngdialog.ngdialog-theme-sprig.ngdialog-closing .ngdialog-content {
+    -webkit-animation-name: anim-close;
+    animation-name: anim-close
+}
+.ngdialog.ngdialog-theme-sprig .ngdialog-close {
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0
+}
+.ngdialog.ngdialog-theme-sprig .ngdialog-close:before {
+    transition: background-image .2s;
+    background-image: url(../images/close_btn.2cb52753.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    font-size: 350%;
+    height: 30px;
+    left: 17px;
+    position: absolute;
+    text-align: center;
+    top: 17px;
+    width: 30px
+}
+.address-modal .apt-zip::after,
+.checkout-modal .checkout-table li::after,
+.payment-modal .expiry-cvc::after,
+.signup-modal .full-name::after {
+    clear: both;
+    content: ""
+}
+.ngdialog.ngdialog-theme-sprig .ngdialog-close:active:before,
+.ngdialog.ngdialog-theme-sprig .ngdialog-close:hover:before {
+    background-image: url(../images/close_btn_on_hover.4c38c143.png)
+}
+.modal:focus {
+    outline: 0
+}
+.modal::-moz-focus-inner {
+    border: 0
+}
+.modal form {
+    padding-left: 4em;
+    padding-right: 4em
+}
+.modal .modal-header {
+    color: #4a4a4a;
+    font-family: Platform, sans-serif;
+    font-size: 2.75em;
+    font-weight: 200;
+    letter-spacing: .125em;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase
+}
+.modal .modal-banner {
+    background-color: #343c47;
+    color: #fff;
+    font-family: "Eudald News", serif;
+    font-size: 1.5em;
+    margin-left: -.8333333333em;
+    margin-right: -.8333333333em;
+    margin-top: 1em;
+    letter-spacing: 1px;
+    padding: .33em 0;
+    text-align: center
+}
+.modal .modal-message,
+.modal .modal-note {
+    text-align: center;
+    font-family: "Eudald News", serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 2em
+}
+.modal .modal-note {
+    color: #6ba539;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    padding: 0 6em
+}
+.modal .modal-message {
+    line-height: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em
+}
+.modal .modal-icon {
+    display: table;
+    height: 4em;
+    margin: 1em auto;
+    width: 4em
+}
+.modal .modal-list {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em
+}
+.modal .modal-list li {
+    font-family: Platform, sans-serif;
+    font-size: 1.75em;
+    font-weight: 200;
+    letter-spacing: 4px;
+    line-height: 1.5em;
+    text-align: center
+}
+.modal .btn-primary {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    padding: 1.25em 4.5em
+}
+.modal .error-section {
+    color: #df0000;
+    line-height: 1.4em;
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+    text-align: center
+}
+.modal .error-section .error-message {
+    font-family: "Eudald News", serif;
+    font-weight: 700;
+    letter-spacing: 1px
+}
+@-webkit-keyframes anim-open {
+    from {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        opacity: 1
+    }
+}
+@keyframes anim-open {
+    from {
+        -webkit-transform: scale3d(1.1, 1.1, 1);
+        transform: scale3d(1.1, 1.1, 1);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        opacity: 1
+    }
+}
+@-webkit-keyframes anim-close {
+    from {
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale3d(.9, .9, 1);
+        opacity: 0
+    }
+}
+@keyframes anim-close {
+    from {
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale3d(.9, .9, 1);
+        transform: scale3d(.9, .9, 1);
+        opacity: 0
+    }
+}
+@media screen and (max-width: 42.594607224em) {
+    .ngdialog.ngdialog-theme-sprig:before {
+        display: none;
+        position: absolute
+    }
+    .ngdialog.ngdialog-theme-sprig .ngdialog-content {
+        display: block;
+        margin-left: 0;
+        width: 100%
+    }
+    .modal form {
+        padding-left: 2em;
+        padding-right: 2em
+    }
+    .modal .modal-header {
+        margin-top: 1.5em;
+        font-size: 1.3em
+    }
+    .modal .modal-note {
+        padding: 0 3em
+    }
+}
+@media screen and (max-width: 450px) {
+    .modal form {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .modal .modal-header {
+        margin-top: 1.5em;
+        font-size: 1.3em
+    }
+    .modal .modal-note {
+        padding: 0
+    }
+}
+.alert-banner {
+    background-color: #4a4a4a;
+    color: #fff;
+    margin-top: 4em;
+    overflow: hidden;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    position: relative;
+    text-align: center
+}
+.alert-banner.weak-banner {
+    background-color: #bec6c4
+}
+.alert-banner .banner-header {
+    font-family: Platform, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase
+}
+.alert-banner p,
+.signup-modal .disclaimer {
+    font-family: "Eudald News", serif;
+    font-style: italic
+}
+.alert-banner .banner-separator {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 2px #9da6b1;
+    height: 1em;
+    margin-bottom: 1em;
+    width: 5em
+}
+.alert-banner p {
+    letter-spacing: 1px;
+    margin-top: .5em
+}
+.new-cities-modal .modal-header {
+    padding-left: 2em;
+    padding-right: 2em
+}
+.new-cities-modal form {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding: 1em 1em 0
+}
+.new-cities-modal input[type=number],
+.new-cities-modal input[type=text] {
+    border: 1px solid #f7f7f7;
+    color: #6ba539;
+    font-family: "Eudald News", serif;
+    font-size: .9em;
+    font-style: italic;
+    margin-right: .25em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-top: .5em
+}
+.new-cities-modal input[type=number]::-webkit-input-placeholder,
+.new-cities-modal input[type=text]::-webkit-input-placeholder {
+    color: #6ba539
+}
+.new-cities-modal input[type=number]::-moz-placeholder,
+.new-cities-modal input[type=text]::-moz-placeholder {
+    color: #6ba539
+}
+.new-cities-modal input[type=number]:-moz-placeholder,
+.new-cities-modal input[type=text]:-moz-placeholder {
+    color: #6ba539
+}
+.new-cities-modal input[type=number]:-ms-input-placeholder,
+.new-cities-modal input[type=text]:-ms-input-placeholder {
+    color: #6ba539
+}
+.new-cities-modal input[type=submit] {
+    display: table-cell;
+    font-size: .9em;
+    margin: 1em 0;
+    padding-left: 2em;
+    padding-right: 2em
+}
+.new-cities-modal input[type=submit].btn-menu {
+    padding-left: 1em;
+    padding-right: 1em
+}
+.new-cities-modal input[type=number].zip {
+    width: 5em
+}
+@-moz-document url-prefix() {
+    .new-cities-modal input[type=number].zip {
+        margin-right: 0
+    }
+}
+.new-cities-modal .email {
+    width: 11em
+}
+.new-cities-modal .us-map-image {
+    margin-top: 1.5em;
+    width: 100%;
+    background: url(../images/map_image.ab65feac.jpg) center center/contain no-repeat;
+    height: 8em
+}
+@media screen and (max-width: 450px) {
+    .new-cities-modal input[type=number],
+    .new-cities-modal input[type=text] {
+        width: 100%
+    }
+    .new-cities-modal input[type=submit].btn-menu {
+        font-size: .7em
+    }
+}
+.signup-modal .disclaimer {
+    font-size: .875em;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    margin-top: 1.4em;
+    opacity: .5;
+    padding: 0 4em
+}
+.signup-modal .disclaimer a {
+    font-size: 1em;
+    line-height: 1.4em
+}
+.signup-modal .full-name {
+    display: block
+}
+.signup-modal .full-name::after {
+    display: table
+}
+.signup-modal .full-name .first-name-grp {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    padding-right: .5em
+}
+.signup-modal .full-name .first-name-grp:last-child,
+.signup-modal .full-name .last-name-grp:last-child {
+    margin-right: 0
+}
+.signup-modal .full-name .last-name-grp {
+    float: left;
+    display: block;
+    width: 48.821174201%;
+    margin-right: 0;
+    padding-left: .5em
+}
+.login-modal .btn-link,
+.login-modal a {
+    display: table;
+    margin-left: auto;
+    margin-right: auto
+}
+@media screen and (max-width: 42.594607224em) {
+    .signup-modal .disclaimer {
+        padding-left: 2em;
+        padding-right: 2em
+    }
+}
+@media screen and (max-width: 450px) {
+    .signup-modal .disclaimer {
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+.login-modal .btn-link {
+    margin-top: 1.5em
+}
+.login-modal a {
+    margin-top: 1em
+}
+.address-modal .apt-zip {
+    display: block
+}
+.address-modal .apt-zip::after {
+    display: table
+}
+.address-modal .apt-zip .apt-grp {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 74.4105871005%;
+    padding-right: .5em
+}
+.address-modal .apt-zip .apt-grp:last-child,
+.address-modal .apt-zip .zip-grp:last-child {
+    margin-right: 0
+}
+.address-modal .apt-zip .zip-grp {
+    float: left;
+    display: block;
+    width: 23.2317613015%;
+    margin-right: 0;
+    padding-left: .5em
+}
+.payment-modal .expiry-cvc {
+    display: block
+}
+.payment-modal .expiry-cvc::after {
+    display: table
+}
+.payment-modal .expiry-cvc .expiry-grp {
+    margin-left: 25.5894128995%;
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 23.2317613015%;
+    padding-right: .5em
+}
+.payment-modal .expiry-cvc .cvc-grp:last-child,
+.payment-modal .expiry-cvc .expiry-grp:last-child {
+    margin-right: 0
+}
+.payment-modal .expiry-cvc .cvc-grp {
+    float: left;
+    display: block;
+    width: 23.2317613015%;
+    margin-right: 0;
+    padding-left: .5em
+}
+.checkout-modal .loading {
+    margin: 2em auto;
+    text-align: center;
+    width: 100%
+}
+.checkout-modal .checkout-table {
+    margin-left: -1.25em;
+    margin-right: -1.25em
+}
+.checkout-modal .checkout-table li {
+    display: block;
+    background-color: #f7f7f7;
+    height: 6em;
+    line-height: 6em;
+    padding-left: 1em;
+    padding-right: 1em
+}
+.checkout-modal .checkout-table li::after {
+    display: table
+}
+.checkout-modal .checkout-table li .quantity,
+.checkout-modal .checkout-table li .title {
+    font-style: italic;
+    float: left;
+    letter-spacing: .125em;
+    font-family: "Eudald News", serif;
+    font-size: 1.25em;
+    height: inherit;
+    display: block;
+    line-height: inherit
+}
+.checkout-modal .checkout-table li .quantity {
+    margin-right: 2.3576515979%;
+    width: 14.7019570017%;
+    padding-left: .8em
+}
+.checkout-modal .checkout-table li .quantity:last-child {
+    margin-right: 0
+}
+.checkout-modal .checkout-table li .title {
+    margin-right: 2.3576515979%;
+    width: 65.8807828007%;
+    padding-right: 5em
+}
+.checkout-modal .checkout-table li .price:last-child,
+.checkout-modal .checkout-table li .title:last-child {
+    margin-right: 0
+}
+.checkout-modal .checkout-table li .title span {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle
+}
+.checkout-modal .checkout-table li .price {
+    float: left;
+    display: block;
+    width: 14.7019570017%;
+    margin-right: 0;
+    font-family: "Eudald News", serif;
+    font-size: 1.25em;
+    font-style: italic;
+    height: inherit;
+    letter-spacing: .125em;
+    line-height: inherit;
+    padding-right: .8em;
+    text-align: right
+}
+.checkout-modal .checkout-additions,
+.checkout-modal .checkout-credit-card,
+.checkout-modal .checkout-promo {
+    display: block;
+    font-family: "Eudald News", serif;
+    font-size: 1.25em;
+    font-style: italic;
+    height: 2em;
+    letter-spacing: .125em
+}
+.checkout-modal .checkout-additions::after,
+.checkout-modal .checkout-credit-card::after,
+.checkout-modal .checkout-promo::after {
+    clear: both;
+    content: "";
+    display: table
+}
+.checkout-modal .checkout-additions .title,
+.checkout-modal .checkout-credit-card .title,
+.checkout-modal .checkout-promo .title {
+    margin-left: 42.6490214991%;
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    height: 2em;
+    line-height: 2em;
+    text-align: right
+}
+.checkout-modal .checkout-additions .price:last-child,
+.checkout-modal .checkout-additions .title:last-child,
+.checkout-modal .checkout-credit-card .price:last-child,
+.checkout-modal .checkout-credit-card .title:last-child,
+.checkout-modal .checkout-promo .price:last-child,
+.checkout-modal .checkout-promo .title:last-child {
+    margin-right: 0
+}
+.checkout-modal .checkout-additions .price,
+.checkout-modal .checkout-credit-card .price,
+.checkout-modal .checkout-promo .price {
+    margin-left: 8.5298042998%;
+    float: left;
+    display: block;
+    width: 14.7019570017%;
+    margin-right: 0;
+    height: 2em;
+    line-height: 2em;
+    padding-right: .8em;
+    text-align: right
+}
+.checkout-modal .checkout-promo {
+    color: #6ba539
+}
+.checkout-modal .checkout-credit-card {
+    color: #9da6b1
+}
+.checkout-modal .checkout-total {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f7f7;
+    color: #9da6b1;
+    font-family: Platform, sans-serif;
+    font-size: 1.875em;
+    letter-spacing: .125em;
+    margin-top: 1em;
+    padding: .5em;
+    text-transform: uppercase
+}
+.checkout-modal .checkout-total .price {
+    color: #4a4a4a;
+    font-family: "Eudald News", serif
+}
+.checkout-modal .btn-primary {
+    margin-bottom: 1.5em
+}
+.confirmation-modal .modal-icon {
+    padding-left: 1em;
+    width: 5em
+}
+.confirmation-modal .modal-footer {
+    background: url(../images/text_link_pco_bg.d2ab6f7e.jpg) center bottom/cover;
+    color: #fff;
+    height: 7em;
+    padding: 1em;
+    margin: 2em -1.25em -1.25em
+}
+.confirmation-modal .modal-footer .modal-message {
+    margin-top: 0
+}
+.confirmation-modal .app-links-frame {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em
+}
+.confirmation-modal .app-links-frame a {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    height: 3em;
+    margin-left: .5em;
+    margin-right: .5em;
+    width: 8em
+}
+.intro-top,
+.main-header-frame {
+    width: 100%
+}
+.intro-header .logo-section,
+.order-header .logo-section {
+    float: left
+}
+.intro-header .nav-section,
+.intro-header .nav-section .nav .nav-item,
+.order-header .nav-section,
+.order-header .nav-section .nav .nav-item {
+    float: right
+}
+.intro-header .logo-frame,
+.order-header .logo-frame {
+    display: block;
+    height: 3.375em;
+    line-height: 3.375em;
+    padding-left: 2.5em
+}
+.intro-header .logo-frame>a,
+.order-header .logo-frame>a {
+    display: inline-block;
+    height: 38px;
+    line-height: 1em;
+    vertical-align: middle
+}
+.intro-header .logo-frame>a>img,
+.order-header .logo-frame>a>img {
+    height: 38px
+}
+.intro-header .sprig-logo,
+.order-header .sprig-logo {
+    color: #fff;
+    font-size: 2.125em;
+    text-decoration: none
+}
+.intro-header .nav-section .nav,
+.order-header .nav-section .nav {
+    margin: 0
+}
+.intro-header .nav-section .nav button,
+.order-header .nav-section .nav button {
+    font-size: .75em;
+    line-height: 1em;
+    margin: 0;
+    padding: 1.75em 2.5em
+}
+.intro-header {
+    background-color: rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10
+}
+.intro-header .logo-section {
+    display: block
+}
+.intro-header:not(.active) {
+    transition: background-color .5s
+}
+.intro-header:not(.active) .nav-section .nav {
+    transition: margin .5s
+}
+.intro-header:not(.active) .nav-section .nav button {
+    transition: margin .5s, padding .5s
+}
+.intro-header.active {
+    background-color: transparent
+}
+.intro-header.active .logo-section {
+    display: none
+}
+.intro-header.active .nav-section .nav button {
+    margin: 1em;
+    padding: 1em 1.5em
+}
+.main-footer .app-links,
+.main-footer .social-media-links {
+    display: table;
+    margin-left: auto;
+    margin-right: auto
+}
+.order-header .logo-frame {
+    padding-left: .5em
+}
+.order-header .btn-weak {
+    color: #4a4a4a
+}
+.main-footer,
+.main-footer a {
+    font-family: Platform, sans-serif;
+    color: #007a3e
+}
+.intro-top {
+    height: 70%;
+    position: absolute;
+    top: 0
+}
+@media screen and (max-width: 600px) {
+    .intro-header .logo-section {
+        display: none
+    }
+}
+.main-footer {
+    background-color: #154734;
+    letter-spacing: .25em;
+    padding: 1em
+}
+.main-footer .logo-section {
+    margin-top: 2em
+}
+.main-footer .app-section {
+    margin-top: 3em
+}
+.main-footer .social-media-section {
+    margin-top: 2em
+}
+.main-footer .site-section {
+    margin-bottom: 1em;
+    margin-top: 3em
+}
+.main-footer a {
+    display: block;
+    text-transform: uppercase
+}
+.main-footer a:hover {
+    color: rgba(0, 122, 62, .5);
+    cursor: pointer
+}
+.main-footer .logo-frame {
+    height: 70px;
+    line-height: 70px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto
+}
+.main-footer .logo-frame>a {
+    display: inline-block;
+    height: 70px;
+    line-height: 1em;
+    vertical-align: middle
+}
+.main-footer .logo-frame>a>img {
+    height: 70px
+}
+.main-footer .sprig-logo {
+    color: #6ba539;
+    font-size: 400%;
+    height: 70px
+}
+.intro,
+.intro h1 {
+    letter-spacing: .175em;
+    color: #fff
+}
+.main-footer .app-link {
+    float: left
+}
+.main-footer .app-link a {
+    font-size: 1.125em;
+    padding: .25em .75em
+}
+.main-footer .social-media-link {
+    float: left
+}
+.main-footer .social-media-link a {
+    background-size: 8em;
+    height: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 2em
+}
+.main-footer .site-links {
+    display: table;
+    margin-left: auto;
+    margin-right: auto
+}
+.main-footer .site-link {
+    float: left
+}
+.main-footer .site-link a {
+    font-size: .75em;
+    padding: .25em 1em
+}
+@media screen and (max-width: 950px) {
+    .main-footer {
+        padding-bottom: 40px
+    }
+    .main-footer .app-section {
+        display: none
+    }
+    .main-footer .site-section {
+        text-align: center
+    }
+    .main-footer .site-links .site-link {
+        width: 100%
+    }
+    .main-footer .site-links .site-link a {
+        display: inline-block;
+        padding: .5em
+    }
+}
+.intro {
+    background: 0 0;
+    font-family: Platform, sans-serif;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+.delivery-banner,
+.intro .mobile-section .mobile-bullet-num,
+.intro h2 {
+    font-family: "Eudald News", serif
+}
+.intro h1 {
+    font-size: 2.2em;
+    font-weight: 500;
+    line-height: 1.25em;
+    text-transform: uppercase
+}
+.intro h2 {
+    font-size: .875em;
+    font-style: italic;
+    letter-spacing: .175em
+}
+.intro h3,
+.intro p {
+    font-size: 1.5em;
+    letter-spacing: .175em
+}
+.intro h3 {
+    color: #c4d600;
+    text-transform: uppercase
+}
+.intro p {
+    margin: 1.5em 0 1em
+}
+.intro .down-arrow img {
+    height: .75em
+}
+.intro .down-arrow img:hover {
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    -webkit-transform: translateY(.25em) scale3d(1.1, 1.1, 1.1);
+    transform: translateY(.25em) scale3d(1.1, 1.1, 1.1)
+}
+.intro .main-logo-section {
+    background: url(../images/background-tile.fe39cf4e.jpg), #66635d;
+    background-size: 100% auto;
+    height: 100%;
+    overflow-y: visible;
+    position: relative;
+    width: 100%;
+    z-index: 5
+}
+.intro .main-logo-section .hero-image-wrapper {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%
+}
+.intro .main-logo-section .hero-image {
+    position: relative;
+    width: 100%
+}
+.intro .main-logo-section .logo-section {
+    height: 9.5em;
+    margin-top: -4.75em;
+    position: absolute;
+    top: 50%;
+    width: 100%
+}
+.intro .main-logo-section .logo {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    height: 5.75em
+}
+.intro .main-logo-section h3 {
+    margin-top: 1.5em;
+    text-align: center
+}
+.intro .main-logo-section .menu-button-section {
+    bottom: 2.5em;
+    position: absolute;
+    width: 100%
+}
+.intro .main-logo-section .btn-primary {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid #c4d600;
+    font-size: .75em;
+    color: #c4d600;
+    margin-top: 14em;
+    padding: 1.25em 2em
+}
+.intro .main-logo-section .btn-primary:not(:disabled):hover {
+    background-color: #c4d600;
+    color: #66635d
+}
+.intro .main-logo-section .down-arrow img {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em
+}
+.intro .main-detail-section {
+    background: url(../images/background-tile.fe39cf4e.jpg) center -100vh, center -100vh #66635d;
+    background-size: 100% auto;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%
+}
+.intro .main-detail-section p {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    margin-top: 0;
+    padding-top: 2em;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 42em;
+    z-index: 5
+}
+.intro .main-detail-section .leaf-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 1.75em;
+    position: relative;
+    z-index: 5
+}
+.intro .intro-menu-section .city-select,
+.intro .mobile-section .down-arrow img,
+.intro .mobile-section .mobile-bullet-num,
+.intro .mobile-section .mobile-steps,
+.intro .mobile-section h3 {
+    margin-right: auto;
+    display: table;
+    margin-left: auto
+}
+.intro .main-detail-section .leaf-logo+p {
+    padding-top: 1em
+}
+.intro .main-detail-section .hero-image-2-full {
+    left: 0;
+    position: relative;
+    width: 100%;
+    z-index: 4
+}
+.intro .mobile-section {
+    background: url(../images/background-tile.fe39cf4e.jpg), #66635d;
+    background-size: contain;
+    height: 250%;
+    position: relative;
+    width: 100%
+}
+.intro .mobile-section .mobile-step-start {
+    height: 40%;
+    position: absolute;
+    top: -40%;
+    width: 100%
+}
+.intro .mobile-section .mobile-step-1,
+.intro .mobile-section .mobile-step-2,
+.intro .mobile-section .mobile-step-3 {
+    height: 20%;
+    position: relative;
+    width: 100%
+}
+.intro .mobile-section .mobile-step-end {
+    height: 40%;
+    position: relative;
+    width: 100%
+}
+.intro .mobile-section .content {
+    background: url(../images/background-tile.fe39cf4e.jpg), #66635d;
+    background-size: 100% auto;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.intro .mobile-section .content .bottom-patch,
+.intro .mobile-section .content .top-patch {
+    background-image: url(../images/background-patch.ef0c8902.png);
+    background-size: auto 100%;
+    height: 120px;
+    position: absolute;
+    width: 100%;
+    z-index: 4
+}
+.intro .mobile-section .content .top-patch {
+    top: -60px
+}
+.intro .mobile-section .content .bottom-patch {
+    bottom: -60px
+}
+.intro .mobile-section .content .hero-image-3-left {
+    height: 40em;
+    left: 0;
+    position: absolute;
+    top: 3em;
+    z-index: 4
+}
+.intro .mobile-section .mobile-step-1.active~.content,
+.intro .mobile-section .mobile-step-2.active~.content,
+.intro .mobile-section .mobile-step-3.active~.content {
+    height: 100%;
+    position: fixed
+}
+.intro .mobile-section .mobile-step-end.active~.content {
+    position: absolute;
+    top: 60%
+}
+.intro .mobile-section h3 {
+    line-height: 1.3em;
+    margin-top: .5em;
+    text-align: center
+}
+.intro .mobile-section .mobile-steps {
+    position: relative;
+    top: 8em;
+    width: 25em;
+    z-index: 5
+}
+.intro .mobile-section .iphone-image-1,
+.intro .mobile-section .iphone-image-2,
+.intro .mobile-section .iphone-image-3 {
+    transition: opacity .4s;
+    height: 30em;
+    left: 56%;
+    opacity: 0;
+    padding-left: 8em;
+    position: absolute;
+    top: 8em;
+    z-index: 4
+}
+.intro .mobile-section .down-arrow {
+    bottom: 2.5em;
+    position: absolute;
+    width: 100%;
+    z-index: 4
+}
+.intro .mobile-section ul {
+    margin-top: 2em
+}
+.intro .mobile-section .mobile-bullet {
+    width: 100%
+}
+.intro .mobile-section .mobile-bullet-1,
+.intro .mobile-section .mobile-bullet-2 {
+    padding: 0 2em
+}
+.intro .mobile-section .mobile-bullet-3 {
+    padding: 0 3em
+}
+.intro .mobile-section .mobile-bullet-num {
+    transition: opacity .2s;
+    border-radius: 50%;
+    color: #fff;
+    font-size: .875em;
+    height: 2.5em;
+    line-height: 1.5em;
+    margin-top: 2em;
+    opacity: .3;
+    text-align: center;
+    width: 2.5em
+}
+.intro .mobile-section .mobile-bullet-text {
+    transition: opacity .2s;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.4em;
+    margin-top: 1em;
+    opacity: .3;
+    text-align: center
+}
+.intro .intro-menu-section .menu-item-title-show-1.active~.content .menu-item-title-1,
+.intro .intro-menu-section .menu-item-title-show-2.active~.content .menu-item-title-2,
+.intro .intro-menu-section .menu-item-title-show-3.active~.content .menu-item-title-3,
+.intro .mobile-section .mobile-step-1.active~.content .iphone-image-1,
+.intro .mobile-section .mobile-step-1.active~.content .mobile-bullet-1 .mobile-bullet-num,
+.intro .mobile-section .mobile-step-1.active~.content .mobile-bullet-1 .mobile-bullet-text,
+.intro .mobile-section .mobile-step-2.active~.content .iphone-image-2,
+.intro .mobile-section .mobile-step-2.active~.content .mobile-bullet-2 .mobile-bullet-num,
+.intro .mobile-section .mobile-step-2.active~.content .mobile-bullet-2 .mobile-bullet-text,
+.intro .mobile-section .mobile-step-3.active~.content .iphone-image-3,
+.intro .mobile-section .mobile-step-3.active~.content .mobile-bullet-3 .mobile-bullet-num,
+.intro .mobile-section .mobile-step-3.active~.content .mobile-bullet-3 .mobile-bullet-text,
+.intro .mobile-section .mobile-step-end.active~.content .iphone-image-3,
+.intro .mobile-section .mobile-step-end.active~.content .mobile-bullet-3 .mobile-bullet-num,
+.intro .mobile-section .mobile-step-end.active~.content .mobile-bullet-3 .mobile-bullet-text,
+.intro .mobile-section .mobile-step-start.active~.content .iphone-image-1,
+.intro .mobile-section .mobile-step-start.active~.content .mobile-bullet-1 .mobile-bullet-num,
+.intro .mobile-section .mobile-step-start.active~.content .mobile-bullet-1 .mobile-bullet-text {
+    opacity: 1
+}
+.intro .intro-menu-section {
+    background: url(../images/background-tile.fe39cf4e.jpg), #66635d;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+.intro .intro-menu-section .menu-item-start {
+    height: 160px;
+    position: relative;
+    width: 100%
+}
+.intro .intro-menu-section .intro-menu-item {
+    position: relative;
+    width: 100%
+}
+.intro .intro-menu-section .menu-item-end {
+    bottom: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%
+}
+.intro .intro-menu-section .dish-background {
+    padding-top: 100px;
+    width: 100%;
+    z-index: -1
+}
+.intro .intro-menu-section .menu-item-title-show-area {
+    height: 50%;
+    position: absolute;
+    top: -50vh;
+    width: 100%
+}
+.intro .intro-menu-section .content {
+    height: 100vh;
+    padding-top: 80px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.intro .intro-menu-section .intro-menu-item.active~.content,
+.intro .intro-menu-section .menu-item-start.active~.content {
+    position: fixed;
+    top: 0
+}
+.intro .intro-menu-section .menu-item-end.active~.content {
+    bottom: 0;
+    position: absolute;
+    top: auto
+}
+.intro .intro-menu-section h2 {
+    text-align: center;
+    z-index: 4
+}
+.intro .intro-menu-section .city-select {
+    margin-top: .375em;
+    position: relative;
+    z-index: 4
+}
+.intro .intro-menu-section .city-select .underline {
+    transition-property: margin, width;
+    transition-duration: .3s, .3s;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 2.75em
+}
+.intro .intro-menu-section .city-select .first-underlined.selected~.underline,
+.intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+.intro .intro-menu-section .city-select .selected.sf-select~.underline,
+.menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.ingredients-nav~.underline {
+    margin-left: 1.75em;
+    opacity: 1;
+    width: 11em
+}
+.intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+.intro .intro-menu-section .city-select .second-underlined.selected~.underline,
+.intro .intro-menu-section .city-select .selected.psl-select~.underline,
+.menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.nutritions-nav~.underline {
+    margin-left: 16.25em;
+    opacity: 1;
+    width: 7.125em
+}
+.intro .intro-menu-section .city-select .selected.chi-select~.underline,
+.intro .intro-menu-section .city-select .third-underlined.selected~.underline {
+    margin-left: 27.25em;
+    opacity: 1;
+    width: 6.375em
+}
+@supports (-webkit-appearance: none) {
+    .intro .intro-menu-section .city-select .underline {
+        transition-property: margin, width;
+        transition-duration: .3s, .3s;
+        height: 1px;
+        background: #6ba539;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 2.75em
+    }
+    .intro .intro-menu-section .city-select .first-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+    .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+    .menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.ingredients-nav~.underline {
+        margin-left: 1.75em;
+        opacity: 1;
+        width: 11em
+    }
+    .intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+    .intro .intro-menu-section .city-select .second-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+    .menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.nutritions-nav~.underline {
+        margin-left: 16.375em;
+        opacity: 1;
+        width: 7.125em
+    }
+    .intro .intro-menu-section .city-select .selected.chi-select~.underline,
+    .intro .intro-menu-section .city-select .third-underlined.selected~.underline {
+        margin-left: 27.375em;
+        opacity: 1;
+        width: 6.375em
+    }
+}
+@-moz-document url-prefix() {
+    .intro .intro-menu-section .city-select .underline {
+        transition-property: margin, width;
+        transition-duration: .3s, .3s;
+        height: 1px;
+        background: #6ba539;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 2.75em
+    }
+    .intro .intro-menu-section .city-select .first-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+    .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+    .menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.ingredients-nav~.underline {
+        margin-left: 1.75em;
+        opacity: 1;
+        width: 11em
+    }
+    .intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+    .intro .intro-menu-section .city-select .second-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+    .menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.nutritions-nav~.underline {
+        margin-left: 17em;
+        opacity: 1;
+        width: 7.125em
+    }
+    .intro .intro-menu-section .city-select .selected.chi-select~.underline,
+    .intro .intro-menu-section .city-select .third-underlined.selected~.underline {
+        margin-left: 28.375em;
+        opacity: 1;
+        width: 6.375em
+    }
+}
+.intro .intro-menu-section .city-select .underline {
+    background: #c4d600;
+    height: 2px
+}
+.intro .intro-menu-section h1 {
+    transition: opacity .6s;
+    color: #fff;
+    margin-top: -.5em;
+    opacity: 0;
+    padding: 0 1em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%
+}
+.intro .intro-menu-section .order-button-section {
+    bottom: 40px;
+    position: absolute;
+    width: 100%
+}
+.intro .intro-menu-section .btn-secondary {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em 4em
+}
+@media screen and (max-width: 1100px) {
+    .intro .mobile-section .content .hero-image-3-left,
+    .intro .mobile-section .iphone-image-1,
+    .intro .mobile-section .iphone-image-2,
+    .intro .mobile-section .iphone-image-3 {
+        display: none
+    }
+}
+@media screen and (max-width: 950px) {
+    .intro .main-detail-section p {
+        padding: 1.5em;
+        width: 100%
+    }
+    .intro .mobile-section .down-arrow {
+        display: none
+    }
+}
+@media screen and (max-width: 850px) {
+    .intro .main-detail-section .hero-image-2-full,
+    .intro .main-logo-section .hero-image {
+        left: 50%;
+        margin-left: -425px;
+        width: 850px
+    }
+}
+@media screen and (max-width: 760px) {
+    .intro .intro-menu-section h1,
+    .intro .main-logo-section h1 {
+        font-size: 2.5em
+    }
+}
+@media screen and (max-width: 610px) {
+    .intro .intro-menu-section h1,
+    .intro .main-logo-section h1 {
+        font-size: 2em;
+        font-weight: 400
+    }
+    .intro .main-logo-section h1 {
+        margin-top: 1em
+    }
+    .intro .city-select .underline {
+        transition-property: margin, width;
+        transition-duration: .3s, .3s;
+        height: 1px;
+        background: #6ba539;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 1.5em
+    }
+    .intro .city-select .first-underlined.selected~.underline,
+    .intro .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+    .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+    .menu-section .menu-item .nav .intro .city-select .selected.ingredients-nav~.underline {
+        margin-left: .75em;
+        opacity: 1;
+        width: 10.75em
+    }
+    .intro .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+    .intro .city-select .second-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+    .menu-section .menu-item .nav .intro .city-select .selected.nutritions-nav~.underline {
+        margin-left: 13em;
+        opacity: 1;
+        width: 7em
+    }
+    .intro .city-select .third-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .selected.chi-select~.underline {
+        margin-left: 21.625em;
+        opacity: 1;
+        width: 6.25em
+    }
+    @supports (-webkit-appearance: none) {
+        .intro .city-select .underline {
+            transition-property: margin, width;
+            transition-duration: .3s, .3s;
+            height: 1px;
+            background: #6ba539;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            top: 1.5em
+        }
+        .intro .city-select .first-underlined.selected~.underline,
+        .intro .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+        .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.ingredients-nav~.underline {
+            margin-left: .75em;
+            opacity: 1;
+            width: 10.75em
+        }
+        .intro .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+        .intro .city-select .second-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.nutritions-nav~.underline {
+            margin-left: 13.125em;
+            opacity: 1;
+            width: 7em
+        }
+        .intro .city-select .third-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.chi-select~.underline {
+            margin-left: 21.75em;
+            opacity: 1;
+            width: 6.25em
+        }
+    }
+    @-moz-document url-prefix() {
+        .intro .city-select .underline {
+            transition-property: margin, width;
+            transition-duration: .3s, .3s;
+            height: 1px;
+            background: #6ba539;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            top: 1.5em
+        }
+        .intro .city-select .first-underlined.selected~.underline,
+        .intro .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+        .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.ingredients-nav~.underline {
+            margin-left: .75em;
+            opacity: 1;
+            width: 10.75em
+        }
+        .intro .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+        .intro .city-select .second-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.nutritions-nav~.underline {
+            margin-left: 13.75em;
+            opacity: 1;
+            width: 7em
+        }
+        .intro .city-select .third-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.chi-select~.underline {
+            margin-left: 22.75em;
+            opacity: 1;
+            width: 6.25em
+        }
+    }
+    .intro .city-select .btn-select {
+        margin: .5em
+    }
+}
+@media screen and (max-width: 500px) {
+    .intro .city-select .underline {
+        transition-property: margin, width;
+        transition-duration: .3s, .3s;
+        height: 1px;
+        background: #6ba539;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: .5em
+    }
+    .intro .city-select .first-underlined.selected~.underline,
+    .intro .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+    .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+    .menu-section .menu-item .nav .intro .city-select .selected.ingredients-nav~.underline {
+        margin-left: .25em;
+        opacity: 1;
+        width: 7.25em
+    }
+    .intro .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+    .intro .city-select .second-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+    .menu-section .menu-item .nav .intro .city-select .selected.nutritions-nav~.underline {
+        margin-left: 8em;
+        opacity: 1;
+        width: 4.75em
+    }
+    .intro .city-select .third-underlined.selected~.underline,
+    .intro .intro-menu-section .city-select .selected.chi-select~.underline {
+        margin-left: 13.375em;
+        opacity: 1;
+        width: 4.375em
+    }
+    @supports (-webkit-appearance: none) {
+        .intro .city-select .underline {
+            transition-property: margin, width;
+            transition-duration: .3s, .3s;
+            height: 1px;
+            background: #6ba539;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            top: .5em
+        }
+        .intro .city-select .first-underlined.selected~.underline,
+        .intro .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+        .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.ingredients-nav~.underline {
+            margin-left: .25em;
+            opacity: 1;
+            width: 7.25em
+        }
+        .intro .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+        .intro .city-select .second-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.nutritions-nav~.underline {
+            margin-left: 8.125em;
+            opacity: 1;
+            width: 4.75em
+        }
+        .intro .city-select .third-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.chi-select~.underline {
+            margin-left: 13.5em;
+            opacity: 1;
+            width: 4.375em
+        }
+    }
+    @-moz-document url-prefix() {
+        .intro .city-select .underline {
+            transition-property: margin, width;
+            transition-duration: .3s, .3s;
+            height: 1px;
+            background: #6ba539;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            top: .5em
+        }
+        .intro .city-select .first-underlined.selected~.underline,
+        .intro .city-select .menu-section .menu-item .nav .selected.ingredients-nav~.underline,
+        .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.ingredients-nav~.underline {
+            margin-left: .25em;
+            opacity: 1;
+            width: 7.5em
+        }
+        .intro .city-select .menu-section .menu-item .nav .selected.nutritions-nav~.underline,
+        .intro .city-select .second-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+        .menu-section .menu-item .nav .intro .city-select .selected.nutritions-nav~.underline {
+            margin-left: 8.75em;
+            opacity: 1;
+            width: 4.75em
+        }
+        .intro .city-select .third-underlined.selected~.underline,
+        .intro .intro-menu-section .city-select .selected.chi-select~.underline {
+            margin-left: 14.5em;
+            opacity: 1;
+            width: 4.5em
+        }
+    }
+    .intro .city-select .btn-select {
+        font-size: .75em;
+        margin: .5em .25em
+    }
+}
+@media screen and (max-width: 450px) {
+    .intro .main-logo-section h1 {
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 2em
+    }
+    .intro .main-detail-section .btn-primary {
+        font-size: .75em
+    }
+    .intro .main-detail-section p {
+        font-size: 1em;
+        padding: 1.5em;
+        width: 100%
+    }
+    .intro .mobile-section {
+        height: auto
+    }
+    .intro .mobile-section .mobile-step-1,
+    .intro .mobile-section .mobile-step-2,
+    .intro .mobile-section .mobile-step-3,
+    .intro .mobile-section .mobile-step-end,
+    .intro .mobile-section .mobile-step-start {
+        display: none
+    }
+    .intro .mobile-section .content {
+        height: auto;
+        position: relative
+    }
+    .intro .mobile-section h1 {
+        font-size: 2em;
+        font-weight: 400;
+        text-align: center
+    }
+    .intro .mobile-section p {
+        font-size: 1em;
+        text-align: center
+    }
+    .intro .mobile-section .mobile-steps {
+        padding: 8em 1em 0;
+        top: 0;
+        width: 100%
+    }
+    .intro .mobile-section .mobile-bullet-num,
+    .intro .mobile-section .mobile-bullet-text {
+        opacity: 1
+    }
+    .intro .intro-menu-section h1 {
+        font-size: 1.25em;
+        font-weight: 400
+    }
+    .intro .intro-menu-section h2 {
+        font-size: 1em
+    }
+    .intro .intro-menu-section .intro-menu-item {
+        height: 80vh;
+        overflow-x: hidden;
+        width: 100%
+    }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    .intro .intro-menu-section .content,
+    .intro .intro-menu-section .menu-item-end,
+    .intro .mobile-section .content {
+        height: 1024px
+    }
+    .intro .intro-menu-section .menu-item-title-show-area {
+        top: -512px
+    }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+    .intro .intro-menu-section .content,
+    .intro .intro-menu-section .menu-item-end,
+    .intro .mobile-section .content {
+        height: 768px
+    }
+    .intro .intro-menu-section .menu-item-title-show-area {
+        top: -384px
+    }
+}
+@media screen and (device-aspect-ratio: 40/71) {
+    .intro .intro-menu-section .content,
+    .intro .intro-menu-section .menu-item-end {
+        height: 500px
+    }
+    .intro .intro-menu-section .menu-item-title-show-area {
+        top: -250px
+    }
+    .intro .intro-menu-section .intro-menu-item {
+        height: 400px
+    }
+    .intro .mobile-section .content {
+        height: 500px
+    }
+}
+.order {
+    background-color: #fff
+}
+.delivery-banner {
+    color: #4a4a4a;
+    height: 4em;
+    letter-spacing: .125em;
+    margin-top: 2em
+}
+.delivery-banner label {
+    font-family: Platform, sans-serif;
+    font-size: .875em;
+    text-transform: uppercase
+}
+.delivery-banner h1 {
+    font-size: 1.5em;
+    font-style: italic
+}
+.delivery-banner h2 {
+    font-size: 1.5em;
+    letter-spacing: .125em
+}
+.delivery-banner h3 {
+    font-size: 1.25em;
+    letter-spacing: .125em
+}
+.delivery-banner .menu-title-section {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    border-right: 1px solid #bec6c4;
+    height: 100%;
+    padding-top: .5em
+}
+.delivery-banner .menu-title-section:last-child {
+    margin-right: 0
+}
+.delivery-banner .menu-title-section .menu-title {
+    margin-top: .25em
+}
+.delivery-banner .address-section {
+    float: left;
+    display: block;
+    width: 34.1192171993%;
+    height: 100%
+}
+.delivery-banner .address-section:last-child {
+    width: 31.7615656014%
+}
+.delivery-banner .address-section.right-divider {
+    border-right: 1px solid #bec6c4
+}
+.delivery-banner .address-section .address-btn {
+    background-color: transparent;
+    border: none;
+    color: #6ba539;
+    display: block;
+    font-family: "Eudald News", serif;
+    font-size: 1em;
+    height: 100%;
+    line-height: 1em;
+    margin-right: 1.618em;
+    padding: 0;
+    text-align: left
+}
+.menu-section,
+.menu-section h4 {
+    font-family: Platform, sans-serif
+}
+.delivery-banner .address-section .address-btn:hover {
+    opacity: .5
+}
+.delivery-banner .address-section .address-inactive {
+    height: 100%;
+    line-height: 2.66em
+}
+.delivery-banner .address-section .address-active {
+    height: 100%;
+    padding-top: .5em
+}
+.delivery-banner .address-section label {
+    color: #4a4a4a
+}
+.delivery-banner .address-section .address-value {
+    line-height: 1em;
+    margin-top: .25em
+}
+.delivery-banner .eta-section {
+    float: left;
+    display: block;
+    width: 31.7615656014%;
+    margin-right: 0;
+    height: 100%;
+    padding-left: 1.618em
+}
+.delivery-banner .eta-section:last-child {
+    margin-right: 0
+}
+.delivery-banner .eta-section .known-eta-message {
+    height: 100%;
+    line-height: 3.2em
+}
+.delivery-banner .eta-section .eta {
+    color: #6ba539
+}
+.delivery-banner .eta-section .eta-loading-icon {
+    height: 100%
+}
+.menu-section {
+    letter-spacing: .125em;
+    margin-bottom: 4em;
+    margin-top: 4em
+}
+.menu-section h4 {
+    font-size: 1.75em;
+    text-transform: uppercase
+}
+.menu-section h5 {
+    font-family: "Eudald News", serif;
+    font-size: 1.125em;
+    font-style: italic
+}
+.menu-section .menu-items {
+    float: left
+}
+.menu-section .menu-item {
+    float: left;
+    margin-bottom: 4em
+}
+.menu-section .menu-item .card {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 100%;
+    height: 35.8163325738em;
+    background-color: #f7f7f7
+}
+.menu-section .menu-item .card:last-child {
+    margin-right: 0
+}
+.menu-section .menu-item .card-photo-frame {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 57.3509785009%;
+    height: 100%;
+    position: relative
+}
+.menu-section .menu-item .card-photo-frame:last-child {
+    margin-right: 0
+}
+.menu-section .menu-item .card-photo {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+.menu-section .menu-item .soldout-overlay,
+.menu-section .menu-item .zeroed-overlay {
+    display: block;
+    height: 100%;
+    left: 0;
+    padding-top: 50%;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.menu-section .menu-item .soldout-overlay .soldout-message,
+.menu-section .menu-item .soldout-overlay .zeroed-message,
+.menu-section .menu-item .zeroed-overlay .soldout-message,
+.menu-section .menu-item .zeroed-overlay .zeroed-message {
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    display: table;
+    font-family: Platform, sans-serif;
+    font-size: 1.75em;
+    letter-spacing: 3px;
+    margin: -2em auto 0;
+    padding: 1.5em 2em;
+    text-align: center;
+    text-transform: uppercase
+}
+.menu-section .menu-item .card-text-head-mobile {
+    display: none
+}
+.menu-section .menu-item .card-text {
+    float: left;
+    display: block;
+    width: 40.2913699012%;
+    margin-right: 0;
+    height: 100%;
+    padding-bottom: 1.618em;
+    padding-right: 1.618em;
+    padding-top: 1.618em
+}
+.menu-section .menu-item .card-text:last-child {
+    margin-right: 0
+}
+.menu-section .menu-item .card-text-top {
+    font-size: 1em;
+    font-weight: 200;
+    height: 65%;
+    letter-spacing: 1px;
+    line-height: 1.125em
+}
+.menu-section .menu-item .restrictions {
+    float: left;
+    padding-top: .5em;
+    width: 100%
+}
+.menu-section .menu-item .restrictions>li {
+    float: left;
+    min-height: 2.5em;
+    min-width: 50%;
+    padding: .5em 0
+}
+.menu-section .menu-item .restrictions>li>img {
+    margin-right: .5em;
+    position: relative;
+    vertical-align: middle
+}
+.menu-section .menu-item .restrictions .restriction-label {
+    font-family: "Eudald News", serif;
+    font-size: .75em;
+    font-style: italic
+}
+.menu-section .menu-item .card-text-bottom {
+    height: 35%
+}
+.menu-section .menu-item .card-text-bottom .nav {
+    height: 30%
+}
+.menu-section .menu-item .card-text-bottom .content {
+    float: left;
+    height: 70%;
+    position: relative;
+    width: 100%
+}
+.menu-section .menu-item .nav {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+}
+.menu-section .menu-item .nav li {
+    float: left;
+    min-width: 8em
+}
+.menu-section .menu-item .nav button {
+    background-color: inherit;
+    border: none;
+    color: #4a4a4a;
+    font-family: inherit;
+    font-size: .875em;
+    letter-spacing: .125em;
+    padding: .25em 0;
+    text-align: left;
+    text-transform: uppercase
+}
+.menu-section .menu-item .nav button:hover {
+    color: #000
+}
+.menu-section .menu-item .nav .underline {
+    transition-property: margin, width;
+    transition-duration: .3s, .3s;
+    height: 1px;
+    background: #6ba539;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 1.5em
+}
+.intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.sf-select~.underline,
+.menu-section .menu-item .nav .first-underlined.selected~.underline,
+.menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.sf-select~.underline,
+.menu-section .menu-item .nav .selected.ingredients-nav~.underline {
+    margin-left: 0;
+    opacity: 1;
+    width: 5.75em
+}
+.intro .intro-menu-section .city-select .menu-section .menu-item .nav .selected.psl-select~.underline,
+.menu-section .menu-item .nav .intro .intro-menu-section .city-select .selected.psl-select~.underline,
+.menu-section .menu-item .nav .second-underlined.selected~.underline,
+.menu-section .menu-item .nav .selected.nutritions-nav~.underline {
+    margin-left: 8em;
+    opacity: 1;
+    width: 7.375em
+}
+.intro .intro-menu-section .city-select .menu-section .menu-item .nav .ng-hide.sf-select~.underline,
+.menu-section .menu-item .nav .first-underlined.ng-hide~.underline,
+.menu-section .menu-item .nav .intro .intro-menu-section .city-select .ng-hide.sf-select~.underline,
+.menu-section .menu-item .nav .ng-hide.ingredients-nav~.underline {
+    margin-left: 0!important
+}
+.menu-section .menu-item .nav .selected button {
+    color: #4a4a4a
+}
+.menu-section .menu-item .nav .selected button:hover {
+    color: #4a4a4a;
+    cursor: default
+}
+.menu-section .menu-item .ingredients,
+.menu-section .menu-item .nutritions {
+    transition: opacity .2s;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.menu-section .menu-item .ingredients.ng-enter,
+.menu-section .menu-item .ingredients.ng-leave.ng-leave-active,
+.menu-section .menu-item .nutritions.ng-enter,
+.menu-section .menu-item .nutritions.ng-leave.ng-leave-active {
+    opacity: 0
+}
+.menu-section .menu-item .ingredients.ng-enter.ng-enter-active,
+.menu-section .menu-item .ingredients.ng-leave,
+.menu-section .menu-item .nutritions.ng-enter.ng-enter-active,
+.menu-section .menu-item .nutritions.ng-leave {
+    opacity: 1
+}
+.menu-section .menu-item .ingredients.ng-animate,
+.menu-section .menu-item .nutritions.ng-animate {
+    display: block!important
+}
+.menu-section .menu-item .ingredients {
+    font-family: "Eudald News", serif;
+    font-size: .625em;
+    font-style: italic;
+    line-height: 1.4em
+}
+.menu-section .menu-item .nutritions.ng-animate {
+    position: absolute
+}
+.menu-section .menu-item .nutritions ol {
+    float: left
+}
+.menu-section .menu-item .nutritions li {
+    float: left;
+    margin-bottom: 1em;
+    width: 50%
+}
+.menu-section .menu-item .nutrition-amount {
+    float: left;
+    font-family: "Eudald News", serif;
+    font-size: 1.125em;
+    padding-right: .75em;
+    text-align: right;
+    width: 50%
+}
+.menu-section .menu-item .nutrition-header {
+    float: left;
+    font-family: Platform, sans-serif;
+    font-size: .75em;
+    line-height: 1.5em;
+    text-align: left;
+    text-transform: uppercase;
+    width: 50%
+}
+.menu-section .menu-item .cost-section {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 65.8807828007%;
+    margin-top: 1em
+}
+.menu-section .menu-item .amount-section:last-child,
+.menu-section .menu-item .cost-section:last-child {
+    margin-right: 0
+}
+.menu-section .menu-item .cost-section .price {
+    margin-top: .375em
+}
+.menu-section .menu-item .amount-section {
+    float: left;
+    display: block;
+    width: 31.7615656014%;
+    margin-right: 0;
+    margin-top: 1em
+}
+.menu-section .menu-item .amount-section>* {
+    float: right
+}
+.menu-section .menu-item .amount-section .counter-amt {
+    font-family: "Eudald News", serif;
+    font-size: 2.25em;
+    height: 1.15em;
+    line-height: 1.15em;
+    margin-right: .25em;
+    margin-left: .25em;
+    min-width: .75em;
+    text-align: center
+}
+.menu-section .menu-item .amount-section .btn-counter span {
+    bottom: 2px;
+    position: relative
+}
+.menu-section .disclaimer {
+    clear: both;
+    color: #4a4a4a;
+    font-size: .75em;
+    font-weight: 200;
+    padding: 0 7em;
+    text-align: center;
+    width: 100%
+}
+.checkout-footer {
+    transition: bottom .6s cubic-bezier(.86, 0, .07, 1);
+    bottom: 1em;
+    color: #fff;
+    position: fixed;
+    width: 68em
+}
+.checkout-footer.ng-hide {
+    bottom: -6em
+}
+.checkout-footer.ng-hide-add,
+.checkout-footer.ng-hide-remove {
+    display: block!important
+}
+.checkout-footer .btn-primary {
+    float: left;
+    display: block;
+    width: 65.8807828007%;
+    font-size: 1.5em;
+    height: 3em;
+    letter-spacing: .2em;
+    position: relative;
+    margin: 0 2.3576515979% 0 17.0596085997%
+}
+.checkout-footer .btn-primary:last-child {
+    margin-right: 0
+}
+@media screen and (max-width: 1088px) {
+    .delivery-banner .address-section,
+    .delivery-banner .eta-section,
+    .delivery-banner .menu-title-section {
+        border-right: none;
+        padding: 0 1em;
+        width: 100%
+    }
+    .menu-section {
+        margin: 0;
+        width: 100%
+    }
+    .menu-section .menu-items {
+        float: left;
+        width: auto
+    }
+    .menu-section .menu-item .card,
+    .menu-section .menu-item .card-photo,
+    .menu-section .menu-item .card-photo-frame,
+    .menu-section .menu-item .card-text {
+        height: auto;
+        width: 100%
+    }
+    .menu-section .menu-item .card-text-head-mobile {
+        background-color: #f7f7f7;
+        border: none;
+        display: block;
+        float: left;
+        font-family: Platform, sans-serif;
+        font-size: 1em;
+        height: 3em;
+        line-height: 3em;
+        padding: 0 .75em;
+        position: relative;
+        text-align: left;
+        text-transform: uppercase;
+        width: 100%
+    }
+    .menu-section .menu-item .card-text-head-mobile:hover {
+        opacity: .8
+    }
+    .menu-section .menu-item .card-text-head-mobile:after {
+        content: '+';
+        display: block;
+        height: 3em;
+        line-height: 3em;
+        padding: 0 .75em;
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+    .menu-section .menu-item .card-text-head-mobile.open:after {
+        content: '-'
+    }
+    .menu-section .menu-item .card-photo {
+        float: none
+    }
+    .menu-section .menu-item .card-text {
+        display: none;
+        height: auto
+    }
+    .menu-section .menu-item .card-text.open {
+        display: block
+    }
+    .menu-section .menu-item .card-text-top {
+        font-size: .9em;
+        height: auto;
+        line-height: 1.4em
+    }
+    .menu-section .menu-item .card-text-bottom {
+        float: left;
+        font-size: .8em;
+        height: auto;
+        width: 100%
+    }
+    .menu-section .menu-item .card-text-bottom .content {
+        height: auto;
+        min-height: 8em
+    }
+    .menu-section .menu-item .ingredients,
+    .menu-section .menu-item .nutritions {
+        font-size: 1em;
+        overflow-y: hidden;
+        position: relative
+    }
+    .menu-section .menu-item .ingredients {
+        height: auto;
+        padding-top: 2em
+    }
+    .menu-section .menu-item .nutritions {
+        height: 8em;
+        padding-top: 2em
+    }
+    .menu-section .menu-item .cost-section {
+        display: block;
+        margin-top: 2em;
+        padding: 0 1.5em;
+        width: 100%
+    }
+    .menu-section .menu-item .amount-section,
+    .menu-section .menu-item .amount-section:last-child {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        width: auto
+    }
+    .menu-section .menu-item .amount-section,
+    .menu-section .menu-item .cost-section {
+        text-align: center
+    }
+    .menu-section .disclaimer {
+        height: auto;
+        padding: 1em
+    }
+    .restrictions>li {
+        display: block
+    }
+    .checkout-footer {
+        width: 100%
+    }
+}
+@media screen and (max-width: 720px) {
+    .alert-banner {
+        font-size: 1em;
+        margin-top: 0
+    }
+    .alert-banner img {
+        height: 100%
+    }
+}
+.container,
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+.browsehappy {
+    margin: .2em 0;
+    background: #ccc;
+    color: #000;
+    padding: .2em 0
+}
+@media screen and (max-width: 768px){
+
+  .zero_margin_padding_me_and_descendants,.zero_margin_padding_me_and_descendants div {
+    padding:0px;
+    margin:0px;
+  }
+
+}
