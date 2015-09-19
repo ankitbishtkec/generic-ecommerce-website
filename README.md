@@ -1,4 +1,5 @@
 # generic-eCommerce-website
+###Features:
 This is the php code for an generic eCommerce website built upon Yii framework 1.1.16, along with MySQL model file for database schemas. This version can be quickly modified to be used for most applications of eCommerce. The website has been inspired by www.jabong.com and www.flipkart.com. The comments can be seen inside code. Features available in current version are :
 
 1- Website is based on Yii framework 1.1.16 http://www.yiiframework.com/. As per the reputation of the framework, the website is fast, scalable and extensible.
@@ -35,7 +36,7 @@ http://xyz.com/tiffin/index/filters/location=Cessna%20Business%20Park#location=c
 
 The urls from new or old browsers are supported accross each other.
 
-13- Every input is sanitized and checked for Sql injection or other attaks.
+13- Every input is sanitized and checked for Sql injection or other attacks.
 
 14- Various code components are present to :
 
@@ -49,11 +50,13 @@ The urls from new or old browsers are supported accross each other.
 	
 	d- Coupon code component to roll out any new discount or cashback coupon codes within seconds the module handles the dynamic verification rules based on pre-programmed logic.
 	
-	e- Wallet component handles the closed wallet present in website. The wallet is centralised i.e. every discount coupon or online payment creates an entry in wallet and thus every transaction and order is acted upon by wallet. The credit entries in wallet is attached with an expiration date so that credited money can be used till specified expiration time.
+	e- Wallet component handles the closed wallet present in website. The wallet is centralized i.e. every discount coupon or online payment creates an entry in wallet and thus every transaction and order is acted upon by wallet. The credit entries in wallet is attached with an expiration date so that credited money can be used till specified expiration time.
+	
+	f- The wallet db table entries includes a HMAC entry based on user defined salt key as another layer of data protection.
 
 15- Every operations on cart is handled on server side after all validations, including HMACed cart cookie's modifications. Each such operation reponds with a JSON string and this response is handled at client side.
 
-16- The order numbers used are guranteed to be unique, is generated once at start of each checkout process, can be easily remembered by human and do not leak any information like number of orders per day by website.
+16- The order numbers used are guaranteed to be unique, is generated once at start of each checkout process, can be easily remembered by human and do not leak any information like number of orders per day by website.
 
 17- Order creation/ checkout process features are:
 
@@ -77,7 +80,7 @@ The urls from new or old browsers are supported accross each other.
 	
 	i- Order creation/ checkout process is highly secure and validates every input at server side also. DOM-modification at client side, filling invalid values or not filling fields are all handled at server side.
 	
-	j- After order completion a sms and email is sent containing HMACed url to view the details of url. Example url : http://xyz.com/cart/checkout/id/65a2378dacaed6d628b2c5ff796699acf8935d0eAnkit%20Bisht_20X61
+	j- After order completion a sms and email is sent containing HMACed url to view the complete details of order. Example url : http://xyz.com/cart/checkout/id/65a2378dacaed6d628b2c5ff796699acf8935d0eAnkit%20Bisht_20X61
 	
 18- A chef can create his own tiffin/ item and can attach tags, price, selling time period and delivery time to it.
 
@@ -85,7 +88,7 @@ The urls from new or old browsers are supported accross each other.
 
 20- Every chef is associated to many localities so the item created by them are only available in their associated localities. 
 
-21- Each item can have mutiple availabilty time period and can be order between those periods only.
+21- Each item can have multiple availability time period slots and can be order between those periods only.
 
 22- Each item can have multiple delivery time and each delivery time has a price and quantity assigned to it. User selects the delivery time during checkout and pays price belonging to the selected delivery time slot. 
 
@@ -95,7 +98,7 @@ The urls from new or old browsers are supported accross each other.
 
 
 
-TODO:
+###TODO:
 
 1- Save phone number with user id in phone table if not exists already during checkout.
 
@@ -126,15 +129,15 @@ TODO:
 10- Add code to send cart abandonment email.
 
 
-DEMO:
+###DEMO:
 
-Demo images/ videos of website can be found inside 'demo' folder.
+Demo images/ videos of website can be found inside 'demo video' folder.
 
 Currently, this code is running at http://128.199.200.150/1/retoss/index.php . However, this demo will be removed from the url soon.
 
 
 
-Landing page background image:
+###Landing page background image:
 
 http://foodiesfeed.com/homemade-turkish-gozleme/
 
