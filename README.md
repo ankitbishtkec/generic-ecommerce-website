@@ -1,4 +1,14 @@
 # generic-eCommerce-website
+
+
+###DEMO:
+
+Demo video of website can be found at https://youtu.be/-KMq0qpOOm4 or inside 'demo video' folder. This folder also contains screenshots of mobile version of  the website. 
+
+Currently, this code is running at http://128.199.200.150/1/retoss/index.php . However, this demo will be removed from the url soon.
+
+
+
 ###Features:
 This is the php code for an generic eCommerce website built upon Yii framework 1.1.16, along with MySQL model file for database schemas. This version can be quickly modified to be used for most applications of eCommerce. The website has been inspired by www.jabong.com and www.flipkart.com. The comments can be seen inside code. Features available in current version are :
 
@@ -127,13 +137,6 @@ The urls from new or old browsers are supported accross each other.
 9- Integrate messaging queue and delegate email, sms and inter-component communication to it. First move towards SOA( Service oriented architecture).
 
 10- Add code to send cart abandonment email.
-
-
-###DEMO:
-
-Demo images/ videos of website can be found inside 'demo video' folder.
-
-Currently, this code is running at http://128.199.200.150/1/retoss/index.php . However, this demo will be removed from the url soon.
 
 
 
