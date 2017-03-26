@@ -1,5 +1,13 @@
 # generic-eCommerce-website
 
+###TROUBLESHOOTING:
+Please use MYSQL 5.5 and PHP 5.6.
+http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
+Also install mcrypt php extension in PHP 5.6.
+sudo apt-get install php5.6-mcrypt
+sudo service apache2 restart
+
 
 ###DEMO:
 
